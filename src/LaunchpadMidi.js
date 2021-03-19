@@ -68,6 +68,10 @@ class LaunchpadMidi {
     return converted;
   }
 
+  /**
+   * Return the hex color value from a given velocity.
+   * Based on default Novation Launchpad Color Palette
+   */
   color (velocity) {
     if (velocity >= 0 && velocity <= 127) {
       let palette = [
