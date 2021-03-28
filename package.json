@@ -1,0 +1,23 @@
+{
+  "name": "launchpad-midi-converter",
+  "version": "0.1.0",
+  "description": "Helps to convert MIDI notes from a layout to any other layout on a Launchpad.",
+  "main": "LPMidiConverter.min.js",
+  "scripts": {
+    "minify": "minify src/LPMidiConverter.js > LPMidiConverter.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vexcited/launchpad-midi-converter.git"
+  },
+  "keywords": [
+    "launchpad",
+    "midi"
+  ],
+  "author": "Vexcited <vexitofficial@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vexcited/launchpad-midi-converter/issues"
+  },
+  "homepage": "https://github.com/Vexcited/launchpad-midi-converter#readme"
+}

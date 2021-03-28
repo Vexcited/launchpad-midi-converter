@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>launchpad-midi-converter</title>
+
+    <link rel="stylesheet" href="./main.css">
+
+    <style>
+        #secondExampleResult {
+            background-color: #000;
+            height: 60px;
+            width: 60px;
+            border-radius: 4px;
+
+            box-shadow: rgba(37, 37, 37, 0.575) 0 0 10px 2px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Launchpad Midi Converter</h1>
+    <p>Convert MIDI note from a layout to another layout.</p> <br />
+    
+    <hr />
+
+    <h2>Converting from a layout to another layout</h2>
+    <label for="#firstExampleNote">MIDI Note</label>
+    <input value="11" type="number" id="firstExampleNote" placeholder="MIDI Note" />
+    <label for="#firstExampleLayoutFrom">"from" Layout</label>
+    <select id="firstExampleLayoutFrom">
+        <option selected>Programmer</option>
+        <option>Live</option>
+    </select>
+
+    <label for="#firstExampleLayoutTo">"to" Layout</label>
+    <select id="firstExampleLayoutTo">
+        <option>Programmer</option>
+        <option selected>Live</option>
+    </select>
+
+    <p>Result: <span id="firstExampleResult"></span></p>
+
+    <hr />
+
+    <h2>HEX from Launchpad Velocity</h2>
+    <p>Based on default Novation Launchpad color palette.</p>
+
+    <input value="0" min="0" max="127" type="number" id="secondExampleVelocity">
+    <div id="secondExampleResult"></div>
+
+    <hr />
+
+    <h2>Demo with a Virtual Launchpad</h2>
+
+    <div id="vLaunchpad"></div>
+    <button id="vLaunchpadPlay">Play MIDI light !</button>
+
+    <!-- Importing the library -->
+    <script src="../LPMidiConverter.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

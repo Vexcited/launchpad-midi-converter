@@ -1,0 +1,39 @@
+:root {
+    --launchpad-pads: #e6e6e6;
+    --launchpad-pads-size: 32px;
+    --launchpad-pads-style: 4px;
+}
+
+/* vLaunchpad */
+
+#launchpad {
+    text-align: center;
+}
+
+.pad, .circle {
+    background-color: var(--launchpad-pads);
+    margin: var(--launchpad-pads-style);
+
+    width: var(--launchpad-pads-size);
+    height: var(--launchpad-pads-size);
+}
+
+.pad {
+    border-radius: var(--launchpad-pads-style);
+}
+
+.circle {
+    border-radius: var(--launchpad-pads-size);
+}
+
+.launchpadRow {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
