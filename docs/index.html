@@ -21,42 +21,46 @@
     </style>
 </head>
 <body>
-    <h1>Launchpad Midi Converter</h1>
-    <p>Convert MIDI note from a layout to another layout.</p> <br />
+    <div class="container">
+        <h1>Launchpad Midi Converter</h1>
+        <p>Convert MIDI note from a layout to another layout.</p> <br />
+        
+        <h2>Converting from a layout to another layout</h2>
+        <section>
+            <label for="#firstExampleNote">MIDI Note</label>
+            <input value="11" type="number" id="firstExampleNote" placeholder="MIDI Note" />
+            <label for="#firstExampleLayoutFrom">"from" Layout</label>
+            <select id="firstExampleLayoutFrom">
+                <option selected>Programmer</option>
+                <option>Live</option>
+            </select>
+        
+            <label for="#firstExampleLayoutTo">"to" Layout</label>
+            <select id="firstExampleLayoutTo">
+                <option>Programmer</option>
+                <option selected>Live</option>
+            </select>
+        
+            <p>Result: <span id="firstExampleResult"></span></p>
+        </section>
     
-    <hr />
+        <h2>HEX from Launchpad Velocity</h2>
+        <section>
+            <p>Based on default Novation Launchpad color palette.</p>
+        
+            <input value="0" min="0" max="127" type="number" id="secondExampleVelocity">
+            <div id="secondExampleResult"></div>
+        </section>
+    
+    
+        <h2>Demo with a Virtual Launchpad</h2>
+    
+        <div class="launchpad_container">
+            <div id="vLaunchpad"></div>
+        </div>
+        <button id="vLaunchpadPlay">Play MIDI light !</button>
 
-    <h2>Converting from a layout to another layout</h2>
-    <label for="#firstExampleNote">MIDI Note</label>
-    <input value="11" type="number" id="firstExampleNote" placeholder="MIDI Note" />
-    <label for="#firstExampleLayoutFrom">"from" Layout</label>
-    <select id="firstExampleLayoutFrom">
-        <option selected>Programmer</option>
-        <option>Live</option>
-    </select>
-
-    <label for="#firstExampleLayoutTo">"to" Layout</label>
-    <select id="firstExampleLayoutTo">
-        <option>Programmer</option>
-        <option selected>Live</option>
-    </select>
-
-    <p>Result: <span id="firstExampleResult"></span></p>
-
-    <hr />
-
-    <h2>HEX from Launchpad Velocity</h2>
-    <p>Based on default Novation Launchpad color palette.</p>
-
-    <input value="0" min="0" max="127" type="number" id="secondExampleVelocity">
-    <div id="secondExampleResult"></div>
-
-    <hr />
-
-    <h2>Demo with a Virtual Launchpad</h2>
-
-    <div id="vLaunchpad"></div>
-    <button id="vLaunchpadPlay">Play MIDI light !</button>
+    </div>
 
     <!-- Importing the library -->
     <script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter"></script>

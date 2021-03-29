@@ -1,13 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
 :root {
-    --launchpad-pads: #e6e6e6;
+    --launchpad-pads: #c5c5c5;
     --launchpad-pads-size: 32px;
-    --launchpad-pads-style: 4px;
+    --launchpad-pads-style: 2px;
 }
+
+/* Global Page */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2E3440;
+    font-family: 'Rubik', sans-serif;
+    color: #D8DEE9;
+}
+
+h2 {
+    font-weight: 400;
+    display: inline;
+}
+
+h1 {
+    font-weight: 500;
+    color: #88C0D0;
+}
+
+.container {
+    text-align: center;
+    margin: auto 0;
+    padding: 2rem;
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: #eceff4;
+    color: #4C566A;
+    border-radius: 4px;
+
+    max-width: 600px;
+}
+
+input {
+    padding: 4px;
+    font-size: 16px;
+    border-width: 2px;
+    border-color: #434c5e;
+    background-color: #ECEFF4;
+    color: #2E3440;
+    border-style: solid;
+    border-radius: 4px;
+    display: block;
+    margin: .25rem auto;
+    text-align: center;
+
+    max-width: 40px;
+}
+input:focus, button:focus {
+    outline: none;
+}
+
+button {
+    padding: 8px;
+    border-width: 2px;
+    border-color: #ECEFF4;
+    background-color: #eceff400;
+    color: #ECEFF4;
+    border-style: solid;
+    display: block;
+    margin: .25rem auto;
+    text-align: center;
+
+    max-width: 200px;
+    transition: all .2s;
+}
+
+button:hover {
+    border-color: #eceff400;
+    background-color: #ECEFF4;
+    color: #2E3440;
+}
+
 
 /* vLaunchpad */
 
 #launchpad {
     text-align: center;
+}
+
+.launchpad_container {
+    display: flex;
+    justify-content: center;
+    margin: .25rem 0;
 }
 
 .pad, .circle {

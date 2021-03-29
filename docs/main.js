@@ -117,7 +117,7 @@ document.getElementById("vLaunchpadPlay").addEventListener("click", () => {
                     // If it is not, then reset the virtual pad color to the default one
                     let currentColor = RGBToHex(virtualPad.style.backgroundColor);
                     if (currentColor === playedColor) {
-                        virtualPad.style.backgroundColor = "#e6e6e6"
+                        virtualPad.style.backgroundColor = "#c5c5c5"
                     }
                 }, note.duration * 10000)
             }, note.time * 10000)
