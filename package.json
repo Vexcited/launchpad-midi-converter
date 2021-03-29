@@ -1,6 +1,6 @@
 {
   "name": "launchpad-midi-converter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Helps to convert MIDI notes from a layout to any other layout on a Launchpad.",
   "main": "LPMidiConverter.min.js",
   "scripts": {
