@@ -33,7 +33,7 @@ class LPMidiConverter {
    * Doesn't require to re-build the layout when
    * convert() is called so the code runs faster.
    */
-  #buildLayout (mode) {
+  buildLayout (mode) {
     let layout = []
 
     switch (mode) {
@@ -80,9 +80,9 @@ class LPMidiConverter {
   }
 
   // Building layouts from upper function
-  #layouts = {
-    programmer: this.#buildLayout("programmer"),
-    live: this.#buildLayout("live")
+  layouts = {
+    programmer: this.buildLayout("programmer"),
+    live: this.buildLayout("live")
   }
 
   /**
@@ -91,7 +91,7 @@ class LPMidiConverter {
    * @returns {Array} - Layout from `mode`
    */
   layout (mode) {
-    return this.#layouts[mode]
+    return this.layouts[mode]
   }
 
   /**
