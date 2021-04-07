@@ -8,7 +8,7 @@ The easiest way is to link the launchpad-midi-converter library from the jsDeliv
 
 If you want to target a specific version, you might prefer:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter@0.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter@0.2.0"></script>
 ```
 
 **Manual** <br />
@@ -26,13 +26,14 @@ You can link it to your HTML page like this:
 
 ## Node
 ```javascript
-const launchpad = require("launchpad-midi-converter")
+const launchpad = require("launchpad-midi-converter");
+launchpad.layout("programmer");
 ```
 
 ## HTML
 ```html
 <script>
-    const launchpad = new LPMidiConverter();
+    LPMidiConverter.layout("live");
 </script>
 ```
 
@@ -45,7 +46,7 @@ const launchpad = require("launchpad-midi-converter")
 ## .layout(mode)
 Where mode is the layout we want. (See *Mode or Layouts availables...*). Returns an array of every notes in the right order. Example:
 ```javascript
->>> launchpad.layout("programmer")
+>>> LPMidiConverter.layout("programmer")
 [
   [81, 82, 83, 84, 85, 86, 87, 88],
   [71, 72, 73, 74, 75, 76, 77, 78],
@@ -57,7 +58,7 @@ Where mode is the layout we want. (See *Mode or Layouts availables...*). Returns
 ## .convert(note, from, to)
 Where note is the note we want to convert (eg.: 11), from is the layout where the note comes from (eg.: 11 comes from the *programmer* layout) and to is the final layout (eg.: *live* layout).
 ```javascript
->>> launchpad.convert(11, "programmer", "live")
+>>> LPMidiConverter.convert(11, "programmer", "live")
 36
 ```
 Explanations: 
@@ -66,10 +67,9 @@ We take the *programmer* layout and we search where the note, so 11, is placed i
 ## .color(velocity)
 Where velocity is between 0 and 127. It returns the HEX color value of the velocity given. Based on default Novation Launchpad color palette.
 ```javascript
->>> launchpad.color(1)
+>>> LPMidiConverter.color(1)
 "1c1c1c"
 ```
-**Don't forget to add the # before the value**, (eg.: #1c1c1c). <br />
 *This function isn't optimised, it's just hardcoded... If theres a better way to do it, please contribute !*
 
 # Want to help ?

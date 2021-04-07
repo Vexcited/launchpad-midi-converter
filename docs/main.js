@@ -1,6 +1,3 @@
-// Defining the library
-const launchpad = new LPMidiConverter();
-
 let firstExampleNote = 11;
 let firstExampleLayoutFrom = "programmer";
 let firstExampleLayoutTo = "live";
@@ -20,7 +17,7 @@ document.getElementById("firstExampleLayoutTo").addEventListener("change", (el) 
 })
 
 const firstExampleConvert = () => {
-    firstExampleResult = launchpad.convert(firstExampleNote, firstExampleLayoutFrom, firstExampleLayoutTo)
+    firstExampleResult = LPMidiConverter.convert(firstExampleNote, firstExampleLayoutFrom, firstExampleLayoutTo)
     if (firstExampleResult != undefined) {
         document.getElementById("firstExampleResult").innerHTML = firstExampleResult;
     }
@@ -39,13 +36,13 @@ let secondExampleResult;
 document.getElementById("secondExampleVelocity").addEventListener("input", (el) => {
     secondExampleVelocity = parseInt(el.target.value);
 
-    secondExampleResult = launchpad.color(secondExampleVelocity)
+    secondExampleResult = LPMidiConverter.color(secondExampleVelocity)
     document.getElementById("secondExampleResult").style.backgroundColor = `${secondExampleResult}`
 })
 
 // Virtual Launchpad example
 // Creating layout
-let vLayout = launchpad.layout("programmer")
+let vLayout = LPMidiConverter.layout("programmer")
 vLayout.map(rows => {
     let virtualRow =  document.createElement('div');
     virtualRow.setAttribute("class", "launchpadRow");
@@ -95,7 +92,7 @@ document.getElementById("vLaunchpadPlay").addEventListener("click", () => {
             let liveNote = note.midi;
 
             // Convert Live note to Programmer note ID
-            let programmerNote = launchpad.convert(liveNote, "live", "programmer");
+            let programmerNote = LPMidiConverter.convert(liveNote, "live", "programmer");
             let noteVelocity = note.velocity * 127;
 
             // Play the note on `note.time` (x10 000) to make it slow.
@@ -106,7 +103,7 @@ document.getElementById("vLaunchpadPlay").addEventListener("click", () => {
                 let virtualPad = document.getElementById(programmerNote)
 
                 // Color we will show.
-                let playedColor = launchpad.color(noteVelocity)
+                let playedColor = LPMidiConverter.color(noteVelocity)
                 // Light up the virtual pad.
                 virtualPad.style.backgroundColor = playedColor;
 
