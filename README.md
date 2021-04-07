@@ -37,6 +37,12 @@ launchpad.layout("programmer");
 </script>
 ```
 
+## React
+```javascript
+import launchpad from "launchpad-midi-converter";
+launchpad.layout("live");
+```
+
 # Documentation
 
 ## Modes or Layouts availables...
