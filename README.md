@@ -4,13 +4,13 @@
 The easiest way is to link the launchpad-midi-converter library from the jsDelivr CDN. To retrieve the latest version, just add this to your HTML page:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter/dist/LaunchpadMidi.browser.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter"></script>
 ```
 
 If you want to target a specific version, you might prefer:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter@2.0.1/dist/LaunchpadMidi.browser.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/launchpad-midi-converter@2.0.1"></script>
 ```
 
 **Manual** <br />
