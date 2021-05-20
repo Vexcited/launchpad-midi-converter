@@ -1,28 +1,42 @@
 {
   "name": "launchpad-midi-converter",
-  "version": "0.2.0",
-  "description": "Helps to convert MIDI notes from a layout to any other layout on a Launchpad.",
-  "main": "LPMidiConverter.min.js",
+  "version": "2.0.1",
+  "description": "Helper for Launchpad MIDI notes !",
+  "main": "dist/LaunchpadMidi.node.js",
+  "module": "dist/LaunchpadMidi.module.js",
+  "browser": "dist/LaunchpadMidi.browser.js",
   "scripts": {
-    "minify": "minify src/LPMidiConverter.js > LPMidiConverter.min.js",
-    "test": "mocha"
+    "build": "rollup -c",
+    "test": "jest",
+    "dev": "nodemon --exec \"yarn build && yarn test\""
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "dist/*"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vexcited/launchpad-midi-converter.git"
   },
   "keywords": [
+    "novation",
     "launchpad",
-    "midi"
+    "midi",
+    "converter"
   ],
   "author": "Vexcited <vexitofficial@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Vexcited/launchpad-midi-converter/issues"
   },
-  "homepage": "https://github.com/Vexcited/launchpad-midi-converter#readme",
+  "homepage": "https://apps.vexcited.me/launchpad-midi-converter",
   "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^8.3.2"
-  }
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "rollup": "^2.48.0"
+  },
+  "files": [
+    "dist"
+  ]
 }
